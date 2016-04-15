@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style type="text/css">
+    @import url(https://fonts.googleapis.com/css?family=Indie+Flower|Poiret+One);
+
+      td.incomplete {
+        background-color: grey;}
+      td.complete {
+        background-color: red;}
+      h1 {
+        font-family: 'Poiret One';
+      }
+      body {
+        font-family: 'Indie Flower';
+        background-color: #a3becc;}
+      ul{
+          background-color:#3d6666;
+          height: 30px;
+          color: white;
+          text-align: center;
+      }
+      li {
+
+        display: inline-block;
+        list-style: none;
+        text-align: center;
+      }
+      .instructions{
+        font-weight: bold;
+        font-size: 25px;
+      }
+      td:hover{
+        border: 5px;
+      }
+
+    </style>
+  </head>
+<body>
+  <h1>BusMall&trade;</h1>
+
+  <ul>
+    <li>Home</li>
+    <li>    </li>
+    <li>    </li>
+    <li>About</li>
+    <li>     </li>
+    <li>    </li>
+    <li>Contact</li>
+  </ul>
+  <p> <span class="instructions">Instructions: </span>Please click on the image that you would most likely want to buy. Complete this task 15 times.</p>
+<table cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>Progress Bar!</tr>
+    <tr>
+      <td id="one" class="incomplete" width= 15px height = 10px margin= 0px border= 0px padding= 0px></td>
+      <td class="incomplete"width= 15px height = 10px></td>
+      <td class="incomplete"width= 15px height = 10px></td>
+      <td class="incomplete"width= 15px height = 10px></td>
+      <td class="incomplete"width= 15px height = 10px></td>
+      <td class="incomplete"width= 15px height = 10px></td>
+      <td class="incomplete"width= 15px height = 10px></td>
+      <td class="incomplete"width= 15px height = 10px></td>
+      <td class="incomplete"width= 15px height = 10px></td>
+      <td class="incomplete"width= 15px height = 10px></td>
+      <td class="incomplete"width= 15px height = 10px></td>
+      <td class="incomplete"width= 15px height = 10px></td>
+      <td class="incomplete"width= 15px height = 10px></td>
+      <td class="incomplete"width= 15px height = 10px></td>
+      <td class="incomplete"width= 15px height = 10px></td>
+    </tr>
+  </tbody>
+</table>
+<table>
+  <tbody>
+    <tr id="photos">
+      <td id="photo1"></td>
+      <td id="photo2"></td>
+      <td id="photo3"></td>
+    </tr>
+    <tr id="results">
+    </tr>
+  </tbody>
+</table>
+
+    <input id="seeChart" type="button" value="See Results!" />
+
+  <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+
+
+  <script type="text/javascript" src="week5.js"></script>
+  <script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  </body>
+
+</html>
