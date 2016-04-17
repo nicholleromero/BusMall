@@ -72,6 +72,7 @@ function registerClick() {
       }
       break;
     }
+localStorage.setItem('photos', JSON.stringify(photos));
 
   }
 
@@ -95,6 +96,14 @@ replacePhotos();
 
 var el = document.getElementById("chartContainer");
 var results = document.getElementById("seeChart");
+
+
+// on load event
+window.addEventListener("load", function () {
+  var retrieve = JSON.parse(localStorage.getItem('photos'));
+  console.log(retrieve);
+  photos = retrieve;
+});
 
 
 
