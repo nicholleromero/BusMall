@@ -8,32 +8,46 @@
       td.incomplete {
         background-color: grey;}
       td.complete {
-        background-color: red;}
+        background-color: red;
+        opacity: 0.5;
+        transition: 1s;}
       h1 {
-        font-family: 'Poiret One';
-      }
+        font-family: 'Poiret One';}
       body {
         font-family: 'Indie Flower';
         background-color: #a3becc;}
       ul{
-          background-color:#3d6666;
-          height: 30px;
-          color: white;
-          text-align: center;
-      }
+        background-color:#3d6666;
+        height: 30px;
+        color: white;
+        text-align: center;}
       li {
-
         display: inline-block;
         list-style: none;
-        text-align: center;
-      }
+        text-align: center;}
       .instructions{
         font-weight: bold;
-        font-size: 25px;
-      }
-      td:hover{
-        border: 5px;
-      }
+        font-size: 25px;}
+
+      img {
+          transition: all 0.5s;
+          opacity: 0.5;
+          height: 200px;
+          width: 200px;
+        }
+
+      .newPics {
+          visibility: hidden;
+          width: 20px;
+          height: 20px;
+        }
+
+      img:hover{
+        width: 230px;
+        height: 230px;
+        border-color: purple;
+        border-width: 10px;
+        opacity: 1;}
 
 
 
@@ -76,10 +90,10 @@
 </table>
 <table>
   <tbody>
-    <tr id="photos">
-      <td id="photo1"></td>
-      <td id="photo2"></td>
-      <td id="photo3"></td>
+    <tr id="photos" class="pics">
+      <td id="photo1" ></td>
+      <td id="photo2" ></td>
+      <td id="photo3" ></td>
     </tr>
     <tr id="results">
     </tr>

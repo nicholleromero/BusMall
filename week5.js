@@ -48,15 +48,15 @@ function threeRandomPhotos() {
 function addPhotosUI(arrayPhoto) { //adding to the page
   var myPhotos = arrayPhoto;
   var photoItem = document.getElementById("photo1");
-  photoItem.innerHTML = "<img id=" + myPhotos[0].imageName +" src=" + myPhotos[0].image + " height='200px' width='200px'>";
+  photoItem.innerHTML = "<img id=" + myPhotos[0].imageName +" src=" + myPhotos[0].image + " >";
   photoItem.addEventListener("click", registerClick);
 
   var photoItem = document.getElementById("photo2");
-  photoItem.innerHTML = "<img id=" + myPhotos[1].imageName +" src=" + myPhotos[1].image + " height='200px' width='200px'>";
+  photoItem.innerHTML = "<img id=" + myPhotos[1].imageName +" src=" + myPhotos[1].image + ">";
   photoItem.addEventListener("click", registerClick);
 
   var photoItem = document.getElementById("photo3");
-  photoItem.innerHTML = "<img id=" + myPhotos[2].imageName +" src=" + myPhotos[2].image + " height='200px' width='200px'>";
+  photoItem.innerHTML = "<img id=" + myPhotos[2].imageName +" src=" + myPhotos[2].image + " >";
   photoItem.addEventListener("click", registerClick);
 }
 
@@ -67,12 +67,19 @@ function registerClick() {
       photos[index].y++;
       counter++;
       if (counter === 15){
-        photoItem.removeEventListener("click", registerClick);
-        userClick.removeEventListener("click", replacePhotos);
+        var fade = document.getElementsByClassName('pics');
+        if (fade.length > 0) {
+          var trans = fade[0];
+          trans.className = 'newPics'
+        }
+
       }
       break;
     }
 localStorage.setItem('photos', JSON.stringify(photos));
+
+
+
 
   }
 
